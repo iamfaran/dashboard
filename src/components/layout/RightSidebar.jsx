@@ -10,12 +10,10 @@ const RightSidebar = ({ orders, isOpen, dispatch }) => {
       style={{
         height: `calc(100vh - var(--header-height))`,
       }}
-      className={`border-4 border-red-500 border-rose-700 fixed z-20 top-[var(--header-height)] w-80 right-0 ${translate}  transition-transform duration-300 ease-in-out lg:translate-x-0`}
+      className={`border-4 bg-white border-red-500 border-rose-700 fixed z-20 top-[var(--header-height)] w-80 right-0 ${translate}  transition-transform duration-300 ease-in-out lg:translate-x-0`}
     >
       <div
-        className={`fixed right-0 z-0 p-4 bg-black cursor-pointer lg:hidden  ${
-          isOpen ? "translate-x-[-320px]" : "translate-x-[-320px]"
-        }`}
+        className={`fixed top-1/2 right-0 z-0 p-4 bg-black cursor-pointer lg:hidden -translate-y-1/2 translate-x-[-320px]`}
         onClick={() => dispatch({ type: "TOGGLE_RIGHT_SIDEBAR" })}
       >
         <FaTruckFront className="text-white" size={20} />
