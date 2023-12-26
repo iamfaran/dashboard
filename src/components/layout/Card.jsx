@@ -1,7 +1,6 @@
 import React from "react";
 
 const Card = ({ imgSrc }) => {
-  console.log(imgSrc);
   return (
     <div
       className="bg-black bg-opacity-75 text-white p-6 rounded-lg w-full"
