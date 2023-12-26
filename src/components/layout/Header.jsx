@@ -3,7 +3,7 @@ import { MdMenu } from "react-icons/md";
 
 const HeaderComponent = ({ toggleRightSidebar }) => {
   return (
-    <header className="border-4 border-red-500 fixed top-0 left-0 w-full bg-blue-gray-900 p-5 flex justify-start lg:justify-between items-center">
+    <header className="border-4 border-red-500 fixed top-0 left-0 w-full bg-[#20262C] p-5 flex justify-start lg:justify-between items-center">
       <button onClick={toggleRightSidebar} className="text-white lg:hidden">
         <MdMenu size={24} />
       </button>

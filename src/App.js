@@ -26,7 +26,7 @@ function App() {
       </div>
 
       <div className="flex">
-        <Sidebar isOpen={rightSidebar} pos={"left-0"}>
+        <Sidebar isOpen={rightSidebar} pos={"left-0"} bgColor="#20262C">
           <div className="flex flex-col justify-between h-full p-5">
             <div>
               <div className="text-gray-500">WELCOME BACK</div>
@@ -62,7 +62,7 @@ function App() {
         <div className="p-5 w-full mt-[var(--header-height)] lg:ml-80 lg:mr-80 lg:flex lg:flex-col lg:items-center">
           <Main />
         </div>
-        <Sidebar pos={"right-0"}></Sidebar>
+        <Sidebar pos={"right-0"} bgColor="#20262C"></Sidebar>
       </div>
     </>
   );
