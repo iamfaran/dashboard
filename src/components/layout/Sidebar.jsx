@@ -12,7 +12,7 @@ const Sidebar = ({ pos, children, isOpen }) => {
   return (
     <aside
       style={{ height: `calc(100vh - var(--header-height))` }}
-      className={`border-4 border-red-500 border-rose-700 fixed top-[var(--header-height)] ${pos} w-64 bg-blue-gray-900 transition-transform duration-300 ease-in-out ${translateClasses} lg:translate-x-0`}
+      className={`border-4 border-red-500 border-rose-700 fixed top-[var(--header-height)] ${pos} w-80 bg-blue-gray-900 transition-transform duration-300 ease-in-out ${translateClasses} lg:translate-x-0`}
     >
       {children}
     </aside>

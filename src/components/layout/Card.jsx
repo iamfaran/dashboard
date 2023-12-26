@@ -2,7 +2,7 @@ import React from "react";
 
 const Card = () => {
   return (
-    <div className="bg-black bg-opacity-75 text-white p-6 rounded-lg lg:w-3/4">
+    <div className="bg-black bg-opacity-75 text-white p-6 rounded-lg w-full">
       <h2 className="text-xl font-bold mb-4">MARKETPLACE</h2>
       <p className="mb-4">
         Dive into our Marketplace, where style meets convenience. Shop for shoes
