@@ -1,5 +1,4 @@
 import React from "react";
-import { Icon } from "@material-tailwind/react";
 
 const Sidebar = ({ pos, children }) => {
   console.log(pos);
