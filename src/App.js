@@ -6,6 +6,7 @@ import Sidebar from "./components/layout/Sidebar";
 import Main from "./components/layout/Main";
 import { FaTruckFront } from "react-icons/fa6";
 import Accordion from "./components/Accordian/Accordian";
+import Button from "./components/Button/Button";
 
 function App() {
   const [rightSidebar, setLeftSidebar] = useState(false);
@@ -35,18 +36,23 @@ function App() {
         <Sidebar isOpen={rightSidebar} pos={"left-0"} bgColor="#20262C">
           <div className="flex flex-col justify-between h-full p-5">
             <div>
-              <div className="text-gray-500">WELCOME BACK</div>
-              <div className="text-xl font-bold mb-4">Hannah</div>
-
-              <div className="text-gray-500">BALANCE</div>
-              <div className="text-xl font-bold mb-4">$79.87</div>
-
+              {/* 1st col */}
               <div className="flex items-center justify-between">
-                <div className="text-gray-500">ADDRESS</div>
+                <div>
+                  <h3 className="text-white font-light">Welcome Back</h3>
+                  <h1 className="font-black text-white">Hannah</h1>
+                  <p className="text-white font-light">Address</p>
+                  <Button text="123 ABC ST" />
+                  <span className="block font-light text-[#FCAF17]">
+                    +Address
+                  </span>
+                </div>
+                {/* 2nd col */}
+                <div className="flex flex-col">
+                  <span className="text-white">Balance</span>
+                  <span className="font-bold text-[#FCAF17]">$0.00</span>
+                </div>
               </div>
-              <div className="mb-4">123 ABC ST.</div>
-
-              <div className="text-blue-500 cursor-pointer">+ ADD ADDRESS</div>
             </div>
 
             <div>
