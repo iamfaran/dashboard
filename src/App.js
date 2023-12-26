@@ -50,17 +50,17 @@ function App() {
             </div>
 
             <div>
-              <div className="uppercase font-bold text-gray-500 mb-2">
+              <div className="uppercase font-bold text-gray-500 mb-2 text-[#FCAF17]">
                 More options
               </div>
               <ul>
-                <li className="mb-2">Profile Settings</li>
-                <li className="mb-2">My Orders</li>
-                <li className="mb-2">Earnings</li>
-                <li className="mb-2">FAQ</li>
-                <li className="mb-2">Partner Program</li>
-                <li className="mb-2">Contact Us</li>
-                <li className="mb-2">Log Out</li>
+                <li className="mb-2 text-white">Profile Settings</li>
+                <li className="mb-2 text-white">My Orders</li>
+                <li className="mb-2 text-white">Earnings</li>
+                <li className="mb-2 text-white">FAQ</li>
+                <li className="mb-2 text-white">Partner Program</li>
+                <li className="mb-2 text-white">Contact Us</li>
+                <li className="mb-2 text-white">Log Out</li>
               </ul>
             </div>
           </div>
