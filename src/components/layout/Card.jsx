@@ -1,8 +1,14 @@
 import React from "react";
 
-const Card = () => {
+const Card = ({ imgSrc }) => {
+  console.log(imgSrc);
   return (
-    <div className="bg-black bg-opacity-75 text-white p-6 rounded-lg w-full">
+    <div
+      className="bg-black bg-opacity-75 text-white p-6 rounded-lg w-full"
+      style={{
+        backgroundImage: `linear-gradient(rgba(32, 38, 44,0.9), rgba(32, 38, 44,0.9)), url(${imgSrc})`,
+      }}
+    >
       <h2 className="text-xl font-bold mb-4">MARKETPLACE</h2>
       <p className="mb-4">
         Dive into our Marketplace, where style meets convenience. Shop for shoes
