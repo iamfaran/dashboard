@@ -59,7 +59,7 @@ function App() {
             </div>
           </div>
         </Sidebar>
-        <div className="p-5  mt-[var(--header-height)] lg:ml-64 md:mr-64 ">
+        <div className="p-5 w-full mt-[var(--header-height)] lg:ml-64 lg:mr-64 lg:flex lg:flex-col lg:items-center">
           <Main />
         </div>
         <Sidebar pos={"right-0"}></Sidebar>
