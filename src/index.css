@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Header height */
+
+:root {
+  --header-height: 4rem;
+}
