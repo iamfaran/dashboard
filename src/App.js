@@ -5,9 +5,16 @@ import Header from "./components/layout/Header";
 import Sidebar from "./components/layout/Sidebar";
 import Main from "./components/layout/Main";
 import { FaTruckFront } from "react-icons/fa6";
+import Accordion from "./components/Accordian/Accordian";
 
 function App() {
   const [rightSidebar, setLeftSidebar] = useState(false);
+
+  const currentOrders = [
+    { orderNum: "12345", storeName: "Store A", status: "In Progress" },
+    { orderNum: "45645", storeName: "Store B", status: "Shipped" },
+    // ... other orders
+  ];
 
   const toggleLeftSidebar = () => {
     setLeftSidebar(!rightSidebar);
@@ -61,7 +68,12 @@ function App() {
         <div className="p-5 w-full mt-[var(--header-height)] lg:ml-80 lg:mr-80 lg:flex lg:flex-col lg:items-center">
           <Main />
         </div>
-        <Sidebar pos={"right-0"} bgColor="#20262C"></Sidebar>
+        <Sidebar pos={"right-0"} bgColor="#fff">
+          <div className="p-5">
+            <h1 className="font-bold	 text-[#FCAF17]">Current Orders</h1>
+            <Accordion orders={currentOrders} />
+          </div>
+        </Sidebar>
       </div>
     </>
   );
