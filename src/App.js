@@ -4,7 +4,7 @@ import "./App.css";
 import Header from "./components/layout/Header";
 import Sidebar from "./components/layout/Sidebar";
 import Main from "./components/layout/Main";
-import { MdOutlineArrowCircleLeft } from "react-icons/md";
+import { FaTruckFront } from "react-icons/fa6";
 
 function App() {
   const [rightSidebar, setLeftSidebar] = useState(false);
@@ -16,13 +16,12 @@ function App() {
   return (
     <>
       <Header toggleRightSidebar={toggleLeftSidebar} />
-      {/* Position fixed button  */}
       <div
         className="fixed right-0 z-50 p-4 bg-black cursor-pointer md:hidden"
         onClick={toggleLeftSidebar}
         style={{ top: "50%", transform: "translateY(-50%)" }}
       >
-        <MdOutlineArrowCircleLeft size={30} />
+        <FaTruckFront className="text-white" size={20} />
       </div>
 
       <div className="flex">
