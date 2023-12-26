@@ -1,12 +1,20 @@
+import { useState } from "react";
+
 import "./App.css";
 import Header from "./components/layout/Header";
 import Sidebar from "./components/layout/Sidebar";
 
 function App() {
+  const [rightSidebar, setRightSidebar] = useState(false);
+
+  const toggleRightSidebar = () => {
+    setRightSidebar(!rightSidebar);
+  };
+
   return (
     <>
-      <Header />
-      <Sidebar pos={"left-0"}>
+      <Header toggleRightSidebar={toggleRightSidebar} />
+      <Sidebar isOpen={rightSidebar} pos={"left-0"}>
         <div className="flex flex-col justify-between h-full p-5">
           <div>
             <div className="text-gray-500">WELCOME BACK</div>
