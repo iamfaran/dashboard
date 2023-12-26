@@ -55,20 +55,17 @@ function App() {
     <>
       <Header dispatch={dispatch} />
       {/* <Overlay /> */}
-      <div
-        className="fixed right-0 z-0 p-4 bg-black cursor-pointer lg:hidden"
-        style={{ top: "50%", transform: "translateY(-50%)" }}
-        onClick={() => dispatch({ type: "TOGGLE_RIGHT_SIDEBAR" })}
-      >
-        <FaTruckFront className="text-white" size={20} />
-      </div>
 
       <div className="flex">
         <LeftSidebar isOpen={state.leftSidebar} />
         <div className="p-5 w-full mt-[var(--header-height)] lg:ml-80 lg:mr-80 lg:flex lg:flex-col lg:items-center">
           <Main />
         </div>
-        <RightSidebar isOpen={state.rightSidebar} orders={currentOrders} />
+        <RightSidebar
+          dispatch={dispatch}
+          isOpen={state.rightSidebar}
+          orders={currentOrders}
+        />
       </div>
     </>
   );
