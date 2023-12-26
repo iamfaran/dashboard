@@ -4,17 +4,27 @@ import "./App.css";
 import Header from "./components/layout/Header";
 import Sidebar from "./components/layout/Sidebar";
 import Main from "./components/layout/Main";
+import { MdOutlineArrowCircleLeft } from "react-icons/md";
 
 function App() {
-  const [rightSidebar, setRightSidebar] = useState(false);
+  const [rightSidebar, setLeftSidebar] = useState(false);
 
-  const toggleRightSidebar = () => {
-    setRightSidebar(!rightSidebar);
+  const toggleLeftSidebar = () => {
+    setLeftSidebar(!rightSidebar);
   };
 
   return (
     <>
-      <Header toggleRightSidebar={toggleRightSidebar} />
+      <Header toggleRightSidebar={toggleLeftSidebar} />
+      {/* Position fixed button  */}
+      <div
+        className="fixed right-0 z-50 p-4 bg-black cursor-pointer md:hidden"
+        onClick={toggleLeftSidebar}
+        style={{ top: "50%", transform: "translateY(-50%)" }}
+      >
+        <MdOutlineArrowCircleLeft size={30} />
+      </div>
+
       <div className="flex">
         <Sidebar isOpen={rightSidebar} pos={"left-0"}>
           <div className="flex flex-col justify-between h-full p-5">
