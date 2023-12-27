@@ -3,7 +3,6 @@ import { useReducer } from "react";
 import "./App.css";
 import Header from "./components/layout/Header";
 import Main from "./components/layout/Main";
-import { FaTruckFront } from "react-icons/fa6";
 import Overlay from "./components/layout/Overlay";
 import LeftSidebar from "./components/layout/LeftSidebar";
 import RightSidebar from "./components/layout/RightSidebar";

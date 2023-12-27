@@ -3,7 +3,7 @@ import { MdMenu } from "react-icons/md";
 
 const HeaderComponent = ({ dispatch }) => {
   return (
-    <header className="border-4 border-red-500 fixed top-0 z-30 left-0 w-full bg-[#20262C] p-5 flex justify-start lg:justify-between items-center">
+    <header className="fixed top-0 z-30 left-0 w-full bg-[#20262C] p-5 flex justify-start lg:justify-between items-center">
       <button
         onClick={() => {
           dispatch({ type: "TOGGLE_LEFT_SIDEBAR" });
@@ -12,7 +12,7 @@ const HeaderComponent = ({ dispatch }) => {
       >
         <MdMenu size={24} />
       </button>
-      <a href="#" className="text-white mx-auto lg:mx-0 ">
+      <a href="/" className="text-white mx-auto lg:mx-0 ">
         <svg
           width="18"
           height="40"

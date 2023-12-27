@@ -9,7 +9,7 @@ const LeftSidebar = ({ isOpen, dispatch }) => {
       style={{
         height: `calc(100vh - var(--header-height))`,
       }}
-      className={`border-4 border-red-500 border-rose-700 fixed z-50 bg-[#20262C] top-[var(--header-height)] w-80 left-0 ${translate} transition-transform duration-300 ease-in-out lg:translate-x-0`}
+      className={`fixed z-50 bg-[#20262C] top-[var(--header-height)] w-80 left-0 ${translate} transition-transform duration-300 ease-in-out lg:translate-x-0`}
     >
       <div className="fixed p-5 right-0 lg:hidden">
         <ImCross
@@ -40,10 +40,8 @@ const LeftSidebar = ({ isOpen, dispatch }) => {
         </div>
 
         <div>
-          <div className="uppercase font-bold text-gray-500 mb-2 text-[#FCAF17]">
-            More options
-          </div>
           <ul>
+            <li className="text-[#FCAF17]">MORE OPTIONS</li>
             <li className="mb-2 text-white">Profile Settings</li>
             <li className="mb-2 text-white">My Orders</li>
             <li className="mb-2 text-white">Earnings</li>

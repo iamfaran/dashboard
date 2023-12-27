@@ -39,6 +39,7 @@ const Main = () => {
   ];
   return (
     <>
+      <h1 className="font-black w-full mb-4">Dashboard</h1>
       {orders.map((order) => (
         <Card key={order.id} order={order} />
       ))}
