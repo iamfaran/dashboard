@@ -57,7 +57,7 @@ function App() {
       <Overlay isOverlay={state.overlay} dispatch={dispatch} />
 
       <div className="flex">
-        <LeftSidebar isOpen={state.leftSidebar} />
+        <LeftSidebar isOpen={state.leftSidebar} dispatch={dispatch} />
         <div className="p-5 w-full mt-[var(--header-height)] lg:ml-80 lg:mr-80 lg:flex lg:flex-col lg:items-center">
           <Main />
         </div>

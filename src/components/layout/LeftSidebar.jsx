@@ -1,6 +1,8 @@
 import React from "react";
 import Button from "../Button/Button";
-const LeftSidebar = ({ isOpen }) => {
+import { ImCross } from "react-icons/im";
+
+const LeftSidebar = ({ isOpen, dispatch }) => {
   const translate = isOpen ? "translate-x-0" : "-translate-x-full";
   return (
     <aside
@@ -9,6 +11,15 @@ const LeftSidebar = ({ isOpen }) => {
       }}
       className={`border-4 border-red-500 border-rose-700 fixed z-50 bg-[#20262C] top-[var(--header-height)] w-80 left-0 ${translate} transition-transform duration-300 ease-in-out lg:translate-x-0`}
     >
+      <div className="fixed p-5 right-0">
+        <ImCross
+          onClick={() => {
+            dispatch({ type: "TOGGLE_LEFT_SIDEBAR" });
+          }}
+          className="text-white"
+          size={20}
+        />
+      </div>
       <div className="flex flex-col justify-between h-full p-5">
         <div>
           {/* 1st col */}
