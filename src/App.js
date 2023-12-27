@@ -54,7 +54,7 @@ function App() {
   return (
     <>
       <Header dispatch={dispatch} />
-      {/* <Overlay /> */}
+      <Overlay isOverlay={state.overlay} dispatch={dispatch} />
 
       <div className="flex">
         <LeftSidebar isOpen={state.leftSidebar} />

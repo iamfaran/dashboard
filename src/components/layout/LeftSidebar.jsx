@@ -7,7 +7,7 @@ const LeftSidebar = ({ isOpen }) => {
       style={{
         height: `calc(100vh - var(--header-height))`,
       }}
-      className={`border-4 border-red-500 border-rose-700 fixed z-20 bg-[#20262C] top-[var(--header-height)] w-80 left-0 ${translate} transition-transform duration-300 ease-in-out lg:translate-x-0`}
+      className={`border-4 border-red-500 border-rose-700 fixed z-50 bg-[#20262C] top-[var(--header-height)] w-80 left-0 ${translate} transition-transform duration-300 ease-in-out lg:translate-x-0`}
     >
       <div className="flex flex-col justify-between h-full p-5">
         <div>

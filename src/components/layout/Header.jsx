@@ -12,7 +12,7 @@ const HeaderComponent = ({ dispatch }) => {
       >
         <MdMenu size={24} />
       </button>
-      <a href="#" className="text-white mx-auto lg:mx-0 lg:flex-1">
+      <a href="#" className="text-white mx-auto lg:mx-0 ">
         <svg
           width="18"
           height="40"
