@@ -1,41 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
+import { Slider } from "@material-tailwind/react";
+import Button from "../Button/Button";
+const Card = ({ order }) => {
+  const [distance, setDistance] = useState(50);
 
-const Card = ({ imgSrc }) => {
+  const handleSliderChange = (event) => {
+    setDistance(Math.round(Number(event.target.value)));
+  };
   return (
     <div
-      className="bg-black bg-opacity-75 text-white p-6 rounded-lg w-full"
       style={{
-        backgroundImage: `linear-gradient(rgba(32, 38, 44,0.9), rgba(32, 38, 44,0.9)), url(${imgSrc})`,
+        backgroundImage: `linear-gradient(rgba(32, 38, 44,0.9), rgba(32, 38, 44,0.9)), url(${order.imgSrc})`,
       }}
+      className="border-2 rounded-lg border-black w-full p-8 mb-6"
     >
-      <h2 className="text-xl font-bold mb-4">MARKETPLACE</h2>
-      <p className="mb-4">
-        Dive into our Marketplace, where style meets convenience. Shop for shoes
-        that step up your game, home decor that transforms spaces, and
-        kitchenware that sparks joy. Your perfect find awaits!
-      </p>
-      <div className="flex items-center justify-between mb-4">
-        <button className="text-yellow-500 bg-opacity-50 px-4 py-2 rounded shadow">
-          SEARCH SETTINGS
-        </button>
-        <span className="bg-yellow-500 text-black px-3 py-1 rounded-full">
-          100KM
-        </span>
+      {/* TITLE */}
+      <h1 className="text-white text-2xl font-bold">{order.title}</h1>
+      {/* Description */}
+      <p className="text-white my-8">{order.description}</p>
+
+      {/* SEARCH SETTINGS */}
+      <div className="flex items-center">
+        <div className="mr-8">
+          <Button text="SEARCH SETTINGS" />
+        </div>
+        <div>
+          <Slider
+            color="amber"
+            value={distance}
+            onChange={handleSliderChange}
+          />
+          <span className="inline-block border-2 bg-black text-white mt-2">
+            {distance} KM
+          </span>
+        </div>
       </div>
-      <div className="flex justify-between">
-        <button className="bg-transparent text-yellow-500 px-4 py-2 rounded shadow">
-          Nearby
-        </button>
-        <button className="bg-transparent text-yellow-500 px-4 py-2 rounded shadow">
-          Alphabetical
-        </button>
-        <button className="bg-transparent text-yellow-500 px-4 py-2 rounded shadow">
-          Cash Back
-        </button>
-      </div>
-      <button className="w-full bg-yellow-500 text-black px-4 py-2 rounded shadow mt-4">
-        SHOP NOW
-      </button>
     </div>
   );
 };
