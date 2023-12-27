@@ -20,8 +20,8 @@ const Card = ({ order }) => {
       <p className="text-white my-8">{order.description}</p>
 
       {/* SEARCH SETTINGS */}
-      <div className="flex items-center">
-        <div className="mr-8">
+      <div className="flex items-center flex-wrap ">
+        <div className="mr-8 my-4">
           <Button text="SEARCH SETTINGS" />
         </div>
         <div>
@@ -39,7 +39,7 @@ const Card = ({ order }) => {
       {/* FILTER */}
       <div className="mt-8">
         <h1 className="text-white font-bold">Filter</h1>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between flex-wrap">
           <div>
             <ul className="flex">
               <li className="text-white underline">Nearby</li>

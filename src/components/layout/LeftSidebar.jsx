@@ -11,7 +11,7 @@ const LeftSidebar = ({ isOpen, dispatch }) => {
       }}
       className={`border-4 border-red-500 border-rose-700 fixed z-50 bg-[#20262C] top-[var(--header-height)] w-80 left-0 ${translate} transition-transform duration-300 ease-in-out lg:translate-x-0`}
     >
-      <div className="fixed p-5 right-0">
+      <div className="fixed p-5 right-0 lg:hidden">
         <ImCross
           onClick={() => {
             dispatch({ type: "TOGGLE_LEFT_SIDEBAR" });
