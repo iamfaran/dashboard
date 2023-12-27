@@ -35,6 +35,24 @@ const Card = ({ order }) => {
           </span>
         </div>
       </div>
+
+      {/* FILTER */}
+      <div className="mt-8">
+        <h1 className="text-white font-bold">Filter</h1>
+        <div className="flex items-center justify-between">
+          <div>
+            <ul className="flex">
+              <li className="text-white underline">Nearby</li>
+              <li className="text-white ml-4">Alphabetical</li>
+              <li className="text-white ml-4">Cashback</li>
+            </ul>
+          </div>
+
+          <div>
+            <Button text="SHOP NOW" />
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

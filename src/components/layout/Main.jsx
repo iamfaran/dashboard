@@ -30,7 +30,7 @@ const Main = () => {
       imgSrc: image3,
     },
     {
-      id: 3,
+      id: 4,
       title: "TOYS",
       description:
         "Explore local goodness in our Grocery Mode. Fresh produce, pantry essentials – all at your fingertips. Support local farms and businesses while curating your kitchen essentials. Nourish your home effortlessly",
