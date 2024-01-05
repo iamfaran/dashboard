@@ -8,6 +8,9 @@ module.exports = withMT({
         "custom-dark": "#20262C",
         "custom-orange": "#FCAF17",
       },
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+      },
     },
   },
   plugins: [],
